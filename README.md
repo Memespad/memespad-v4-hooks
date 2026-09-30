@@ -47,3 +47,41 @@ The deployed Hook source is verified on the Arc block explorer.
 ## License
 
 MIT
+
+
+## Current V2 Hook
+
+The current MemesPad V2 Hook is used by newly launched tokens on the MemesPad platform.
+
+### Deployment
+
+- Chain: Arc
+- Hook: `0x5640A3a688c2bB745061a7D42430307e766d00cC`
+- Example Pool ID: `0x3bd1ae4dfe1eff4cd38a38b557429d832ca22fe5c1e9b051723d702aa7b5a401`
+- Example Token: `0x267702e2FD19Af533f7F55F0E06D5F7C41E87777`
+
+### Hook Functionality
+
+The MemesPad V2 Hook applies configurable buy and sell fees during swaps and routes those fees on-chain between:
+
+- Creator/platform rewards
+- Automated token buyback and burn
+- Holder dividends
+- Automatic liquidity
+
+The Hook also supports configurable fair-launch protections, including an anti-snipe window and maximum-buy protection during the initial launch period.
+
+### Uniswap v4 Permissions
+
+The V2 Hook uses:
+
+- `beforeSwap`
+- `afterSwap`
+- `beforeSwapReturnDelta`
+- `afterSwapReturnDelta`
+
+The return-delta permissions are used to account for configured token fees during swap execution.
+
+### Source
+
+The complete V2 Hook source is available in the `/V2` directory of this repository.
